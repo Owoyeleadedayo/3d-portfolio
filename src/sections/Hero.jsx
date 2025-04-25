@@ -26,16 +26,20 @@ const Hero = () => {
 
 
     useGSAP(() => {
-      gsap.fromTo(".hero-text, h1", {
-        y: 50,
-        opacity: 1
-      }, {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 1.5,
-        ease: "power2.inOut"
-      })
+      gsap.fromTo(
+        ".hero-text, h1, p, .button",
+        {
+          y: 50,
+          opacity: 1,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.2,
+          duration: 1.5,
+          ease: "power2.inOut",
+        }
+      );
     })
 
   return (
@@ -81,7 +85,7 @@ const Hero = () => {
               a dedicated developer building innovative solutions.
             </p>
             <Button
-              className={"md:80 md:h-16 w-60 h-12"}
+              className={"button md:80 md:h-16 w-60 h-12"}
               id="button"
               text="Contact"
             />
