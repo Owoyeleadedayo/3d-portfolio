@@ -2,7 +2,6 @@ import { useRef } from "react";
 
 const Contact = () => {
     const nameRef = useRef();
-    const phoneRef = useRef();
     const messageRef = useRef();
 
     const handleSubmit = (e) => {
@@ -14,7 +13,7 @@ const Contact = () => {
       const fullMessage = `Hi, I'm ${name} and ${message}`;
       const encodedMessage = encodeURIComponent(fullMessage);
 
-      const yourWhatsAppNumber = "08110443114"; // replace this with YOUR WhatsApp number
+      const yourWhatsAppNumber = "2348012345678"; // YOUR WhatsApp number
       const whatsappUrl = `https://wa.me/${yourWhatsAppNumber}?text=${encodedMessage}`;
 
       window.open(whatsappUrl, "_blank");
@@ -61,7 +60,6 @@ const Contact = () => {
                 <input
                   type="tel"
                   //   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  ref={phoneRef}
                   name="floating_phone"
                   id="floating_phone"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer rounded-none"
