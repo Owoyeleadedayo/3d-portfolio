@@ -5,6 +5,7 @@ import HeroExperience from '../components/HeroModels/HeroExperience';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap'
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const Hero = () => {
     const colorClasses = [
@@ -93,6 +94,7 @@ const Hero = () => {
         </figure>
       </div>
       <Contact />
+      <Footer />
     </section>
   );
 }

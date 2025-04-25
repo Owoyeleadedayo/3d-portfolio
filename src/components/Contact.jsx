@@ -20,7 +20,10 @@ const Contact = () => {
   };
   return (
     <>
-      <div id="contact" className="xl:mt-0 mt-32">
+      <div
+        id="contact"
+        className="xl:mt-0 mt-32 md:w-full w-screen md:px-20 px-5"
+      >
         <div className="flex flex-col gap-4 padding-x-lg">
           <div>
             <h1 className="md:text-xl text-lg font-2xl font-MonaSans">
@@ -39,10 +42,10 @@ const Contact = () => {
             </h4>
           </div>
         </div>
-        <hr className="my-5" />
+        <hr className="mt-10" />
         <div className="flex w-full h-100 justify-center items-center">
           <form className="mx-auto" onSubmit={handleSubmit}>
-            <div className="grid md:grid-cols-2 md:gap-6">
+            <div className="grid md:grid-cols-2 md:gap-6 md:w-full w-screen md:px-20 px-5">
               <div className="relative z-0 w-full mb-5 group">
                 <input
                   type="text"
@@ -78,7 +81,7 @@ const Contact = () => {
                 </label>
               </div>
             </div>
-            <div>
+            <div className="md:w-full w-screen md:px-20 px-5">
               <label
                 for="message"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
