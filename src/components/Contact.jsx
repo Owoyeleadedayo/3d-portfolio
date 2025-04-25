@@ -9,13 +9,13 @@ const Contact = () => {
       e.preventDefault();
 
       const name = nameRef.current.value;
-      const phone = phoneRef.current.value.replace(/\D/g, ""); // remove spaces or dashes
       const message = messageRef.current.value;
 
       const fullMessage = `Hi, I'm ${name} and ${message}`;
       const encodedMessage = encodeURIComponent(fullMessage);
 
-      const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+      const yourWhatsAppNumber = "08110443114"; // replace this with YOUR WhatsApp number
+      const whatsappUrl = `https://wa.me/${yourWhatsAppNumber}?text=${encodedMessage}`;
 
       window.open(whatsappUrl, "_blank");
     };
