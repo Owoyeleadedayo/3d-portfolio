@@ -1,32 +1,36 @@
 import { useRef } from "react";
 
 const Contact = () => {
-    const nameRef = useRef();
-    const messageRef = useRef();
+  const nameRef = useRef();
+  const messageRef = useRef();
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-      const name = nameRef.current.value;
-      const message = messageRef.current.value;
+    const name = nameRef.current.value;
+    const message = messageRef.current.value;
 
-      const fullMessage = `Hi, I'm ${name} and ${message}`;
-      const encodedMessage = encodeURIComponent(fullMessage);
+    const fullMessage = `Hi, I'm ${name} and ${message}`;
+    const encodedMessage = encodeURIComponent(fullMessage);
 
-      const yourWhatsAppNumber = "2348012345678"; // YOUR WhatsApp number
-      const whatsappUrl = `https://wa.me/${yourWhatsAppNumber}?text=${encodedMessage}`;
+    const yourWhatsAppNumber = "2348110443114"; // Replace with YOUR WhatsApp number
+    const whatsappUrl = `https://wa.me/${yourWhatsAppNumber}?text=${encodedMessage}`;
 
-      window.open(whatsappUrl, "_blank");
-    };
+    window.open(whatsappUrl, "_blank");
+  };
   return (
     <>
       <div id="contact" className="xl:mt-0 mt-32">
         <div className="flex flex-col gap-4 padding-x-lg">
           <div>
-            <h1 className="md:text-xl text-lg font-2xl font-MonaSans">Get in Touch</h1>
+            <h1 className="md:text-xl text-lg font-2xl font-MonaSans">
+              Get in Touch
+            </h1>
           </div>
           <div>
-            <h1 className="capitalize md:text-5xl text-3xl">Let's chat, reach out to me</h1>
+            <h1 className="capitalize md:text-5xl text-3xl">
+              Let's chat, reach out to me
+            </h1>
           </div>
           <div>
             <h4 className="md:text-xl text-lg font-2xl">
@@ -89,7 +93,7 @@ const Contact = () => {
                 placeholder="Leave a comment..."
               ></textarea>
             </div>
-            <div className="flex justify-center items-center"> 
+            <div className="flex justify-center items-center">
               <button
                 type="submit"
                 className="mt-4 px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600"
